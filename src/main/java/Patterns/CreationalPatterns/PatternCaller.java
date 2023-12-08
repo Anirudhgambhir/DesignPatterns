@@ -2,6 +2,7 @@ package Patterns.CreationalPatterns;
 
 import Patterns.CreationalPatterns.BuilderPattern.BuilderLombok;
 import Patterns.CreationalPatterns.BuilderPattern.BuilderManual;
+import Patterns.CreationalPatterns.PrototypePattern.PrototypeClass;
 import Patterns.CreationalPatterns.SingletonPattern.SingletonClass;
 
 public class PatternCaller {
@@ -24,5 +25,12 @@ public class PatternCaller {
         SingletonClass singletonClass2 = SingletonClass.getSingletonClassObject();
         System.out.println(SingletonClass.checkObject(singletonClass));
         System.out.println(SingletonClass.checkObject(singletonClass2));
+    }
+
+    public static void prototypePatternCaller() {
+        PrototypeClass prototypeClass = new PrototypeClass();
+        PrototypeClass prototypeClass1 = (PrototypeClass) prototypeClass.copy();
+        System.out.println(PrototypeClass.checkObject(prototypeClass));
+        System.out.println(PrototypeClass.checkObject(prototypeClass1));
     }
 }

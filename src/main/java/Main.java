@@ -12,5 +12,7 @@ public class Main {
         // Singleton pattern - Double Locking
         PatternCaller.singletonDoubleLocking();
 
+        // Prototype Pattern
+        PatternCaller.prototypePatternCaller();
     }
 }
