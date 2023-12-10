@@ -14,5 +14,8 @@ public class Main {
 
         // Prototype Pattern
         PatternCaller.prototypePatternCaller();
+
+        // Factory Method Patter
+        PatternCaller.factoryPatternCaller();
     }
 }
