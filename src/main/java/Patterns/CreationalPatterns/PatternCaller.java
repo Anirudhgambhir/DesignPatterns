@@ -1,5 +1,6 @@
 package Patterns.CreationalPatterns;
 
+import Patterns.CreationalPatterns.AbstractFactoryPattern.FactoryCreator;
 import Patterns.CreationalPatterns.BuilderPattern.BuilderLombok;
 import Patterns.CreationalPatterns.BuilderPattern.BuilderManual;
 import Patterns.CreationalPatterns.FactoryMethodPattern.ObjectFactory.ObjectFactory;
@@ -48,4 +49,14 @@ public class PatternCaller {
         // PlasticFactory
         System.out.println(objectFactory.createFactory("PLASTIC_FACTORY").getObject("RAW MATERIALS SENT"));
     }
+
+    public static void abstractFactoryPatternCaller() {
+        // SteelFactory
+        System.out.println(FactoryCreator.getFactory("Factory").getFactory("STEEL").getFactoryName());
+
+        // PlasticFactory
+        System.out.println(FactoryCreator.getFactory("Material").getMaterial("PLASTIC").createMaterial("cellulose"));
+    }
+
+
 }
