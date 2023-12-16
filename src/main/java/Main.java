@@ -1,24 +1,38 @@
-import Patterns.CreationalPatterns.PatternCaller;
+import Patterns.PatternCallers.CreationalPatternCaller;
+import Patterns.PatternCallers.StructuralPatternCaller;
 
 public class Main {
     public static void main(String[] args) {
 
+        // Creation Pattern Callers
+        creationalPatternCallers();
+
+        // Structural Pattern Callers
+        structuralPatternCallers();
+    }
+
+    private static void structuralPatternCallers() {
+        // Adapter Pattern
+        StructuralPatternCaller.adapterPatternCaller();
+    }
+
+    private static void creationalPatternCallers() {
         // Builder Pattern - Manual
-        PatternCaller.builderManual();
+        CreationalPatternCaller.builderManual();
 
         // Builder Pattern using Lombok
-        PatternCaller.builderLombok();
+        CreationalPatternCaller.builderLombok();
 
         // Singleton pattern - Double Locking
-        PatternCaller.singletonDoubleLocking();
+        CreationalPatternCaller.singletonDoubleLocking();
 
         // Prototype Pattern
-        PatternCaller.prototypePatternCaller();
+        CreationalPatternCaller.prototypePatternCaller();
 
         // Factory Method Pattern
-        PatternCaller.factoryPatternCaller();
+        CreationalPatternCaller.factoryPatternCaller();
 
         // Abstract Factory Pattern
-        PatternCaller.abstractFactoryPatternCaller();
+        CreationalPatternCaller.abstractFactoryPatternCaller();
     }
 }

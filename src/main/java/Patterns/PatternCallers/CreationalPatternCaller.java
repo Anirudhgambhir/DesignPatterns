@@ -1,4 +1,4 @@
-package Patterns.CreationalPatterns;
+package Patterns.PatternCallers;
 
 import Patterns.CreationalPatterns.AbstractFactoryPattern.FactoryCreator;
 import Patterns.CreationalPatterns.BuilderPattern.BuilderLombok;
@@ -7,7 +7,7 @@ import Patterns.CreationalPatterns.FactoryMethodPattern.ObjectFactory.ObjectFact
 import Patterns.CreationalPatterns.PrototypePattern.PrototypeClass;
 import Patterns.CreationalPatterns.SingletonPattern.SingletonClass;
 
-public class PatternCaller {
+public class CreationalPatternCaller {
     public static void builderManual() {
         BuilderManual builder = BuilderManual.builder()
                 .withId(1234).withName("JOHN DOE").withCompany("TEST").withSalary(123456).build();
