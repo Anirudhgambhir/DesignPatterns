@@ -14,6 +14,9 @@ public class Main {
     private static void structuralPatternCallers() {
         // Adapter Pattern
         StructuralPatternCaller.adapterPatternCaller();
+
+        // Bridge Patter
+        StructuralPatternCaller.bridgePatternCaller();
     }
 
     private static void creationalPatternCallers() {
