@@ -8,6 +8,9 @@ import Patterns.StructuralPatterns.BridgePattern.Device.TV;
 import Patterns.StructuralPatterns.BridgePattern.Remote.AdvancedRemote;
 import Patterns.StructuralPatterns.BridgePattern.Remote.BasicRemote;
 import Patterns.StructuralPatterns.BridgePattern.Remote.Remote;
+import Patterns.StructuralPatterns.CompositePattern.CompanyDirectory;
+import Patterns.StructuralPatterns.CompositePattern.Developer;
+import Patterns.StructuralPatterns.CompositePattern.Manager;
 
 public class StructuralPatternCaller {
 
@@ -20,14 +23,34 @@ public class StructuralPatternCaller {
     public static void bridgePatternCaller() {
         // TV Caller
         Device tv = new TV();
-        bridgePatternhelper(tv);
+        bridgePatternHelper(tv);
 
         // Speaker Caller
         Speaker speaker = new Speaker();
-        bridgePatternhelper(speaker);
+        bridgePatternHelper(speaker);
     }
 
-    private static void bridgePatternhelper(Device device) {
+    public static void compositePatternCaller() {
+        Developer dev1 = new Developer("Lokesh Sharma",1001, 1234);
+        Developer dev2 = new Developer("Lokesh Sharma",1002, 1234);
+        CompanyDirectory engDirectory = new CompanyDirectory();
+        engDirectory.addEmployee(dev1);
+        engDirectory.addEmployee(dev2);
+
+        Manager man1 = new Manager("Lokesh Sharma Manager",1003,1234);
+        Manager man2 = new Manager("Lokesh Sharma Manager2",1004, 1234);
+
+        CompanyDirectory accDirectory = new CompanyDirectory();
+        accDirectory.addEmployee(man1);
+        accDirectory.addEmployee(man2);
+
+        CompanyDirectory directory = new CompanyDirectory();
+        directory.addEmployee(engDirectory);
+        directory.addEmployee(accDirectory);
+        directory.getEmployeeDetails();
+    }
+
+    private static void bridgePatternHelper(Device device) {
         // Basic Remote
         Remote remote = new BasicRemote(device);
         remote.turnOn();
@@ -40,5 +63,4 @@ public class StructuralPatternCaller {
         advancedRemote.shakeItOff();
         advancedRemote.check();
     }
-
 }
