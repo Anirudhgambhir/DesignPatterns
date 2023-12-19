@@ -20,6 +20,9 @@ public class Main {
 
         // Composite Pattern
         StructuralPatternCaller.compositePatternCaller();
+
+        // Decorator Pattern
+        StructuralPatternCaller.decoratorPatternCaller();
     }
 
     private static void creationalPatternCallers() {

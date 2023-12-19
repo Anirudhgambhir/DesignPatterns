@@ -11,6 +11,9 @@ import Patterns.StructuralPatterns.BridgePattern.Remote.Remote;
 import Patterns.StructuralPatterns.CompositePattern.CompanyDirectory;
 import Patterns.StructuralPatterns.CompositePattern.Developer;
 import Patterns.StructuralPatterns.CompositePattern.Manager;
+import Patterns.StructuralPatterns.DecoratorPattern.Industry;
+import Patterns.StructuralPatterns.DecoratorPattern.LargeFactory;
+import Patterns.StructuralPatterns.DecoratorPattern.SmallFactory;
 
 public class StructuralPatternCaller {
 
@@ -20,6 +23,7 @@ public class StructuralPatternCaller {
         System.out.println(iceCreamFactoryAdapter.burn());
     }
 
+    // Bridge Pattern Caller
     public static void bridgePatternCaller() {
         // TV Caller
         Device tv = new TV();
@@ -30,6 +34,7 @@ public class StructuralPatternCaller {
         bridgePatternHelper(speaker);
     }
 
+    // Composite Pattern Caller
     public static void compositePatternCaller() {
         Developer dev1 = new Developer("Lokesh Sharma",1001, 1234);
         Developer dev2 = new Developer("Lokesh Sharma",1002, 1234);
@@ -48,6 +53,19 @@ public class StructuralPatternCaller {
         directory.addEmployee(engDirectory);
         directory.addEmployee(accDirectory);
         directory.getEmployeeDetails();
+    }
+
+    // Decorator Pattern Caller
+    public static void decoratorPatternCaller() {
+        Industry small = new SmallFactory();
+        System.out.println("SMALL COST : " + small.getCost());
+        System.out.println("SMALL CAPACITY : " + small.getCapacity());
+        System.out.println("SMALL EMPLOYEE : " + small.employeeCapacity());
+
+        Industry large = new LargeFactory(small);
+        System.out.println("LARGE COST : " + large.getCost());
+        System.out.println("LARGE CAPACITY : " + large.getCapacity());
+        System.out.println("LARGE EMPLOYEE : " + large.employeeCapacity());
     }
 
     private static void bridgePatternHelper(Device device) {
