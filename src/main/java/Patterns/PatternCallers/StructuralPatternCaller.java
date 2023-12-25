@@ -14,6 +14,9 @@ import Patterns.StructuralPatterns.CompositePattern.Manager;
 import Patterns.StructuralPatterns.DecoratorPattern.Industry;
 import Patterns.StructuralPatterns.DecoratorPattern.LargeFactory;
 import Patterns.StructuralPatterns.DecoratorPattern.SmallFactory;
+import Patterns.StructuralPatterns.FacadePattern.HomeFacade;
+import Patterns.StructuralPatterns.FacadePattern.LogicClasses.AirConditioner;
+import Patterns.StructuralPatterns.FacadePattern.LogicClasses.MusicSystem;
 
 public class StructuralPatternCaller {
 
@@ -66,6 +69,12 @@ public class StructuralPatternCaller {
         System.out.println("LARGE COST : " + large.getCost());
         System.out.println("LARGE CAPACITY : " + large.getCapacity());
         System.out.println("LARGE EMPLOYEE : " + large.employeeCapacity());
+    }
+
+    public static void facadePatternCaller() {
+        HomeFacade homeFacade = new HomeFacade(new MusicSystem(), new AirConditioner());
+        homeFacade.eveningMode();
+        homeFacade.nightMode();
     }
 
     private static void bridgePatternHelper(Device device) {

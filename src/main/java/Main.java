@@ -23,6 +23,9 @@ public class Main {
 
         // Decorator Pattern
         StructuralPatternCaller.decoratorPatternCaller();
+
+        // Facade Pattern
+        StructuralPatternCaller.facadePatternCaller();
     }
 
     private static void creationalPatternCallers() {
