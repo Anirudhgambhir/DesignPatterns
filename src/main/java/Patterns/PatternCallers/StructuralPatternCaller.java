@@ -17,7 +17,9 @@ import Patterns.StructuralPatterns.DecoratorPattern.SmallFactory;
 import Patterns.StructuralPatterns.FacadePattern.HomeFacade;
 import Patterns.StructuralPatterns.FacadePattern.LogicClasses.AirConditioner;
 import Patterns.StructuralPatterns.FacadePattern.LogicClasses.MusicSystem;
+import lombok.experimental.UtilityClass;
 
+@UtilityClass
 public class StructuralPatternCaller {
 
     // Adapter Pattern

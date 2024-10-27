@@ -1,3 +1,4 @@
+import Patterns.PatternCallers.BehavioralPatternCaller;
 import Patterns.PatternCallers.CreationalPatternCaller;
 import Patterns.PatternCallers.StructuralPatternCaller;
 
@@ -9,6 +10,9 @@ public class Main {
 
         // Structural Pattern Callers
         structuralPatternCallers();
+
+        // Behavioral Pattern Caller
+        behavioralPatternCallers();
     }
 
     private static void structuralPatternCallers() {
@@ -46,5 +50,10 @@ public class Main {
 
         // Abstract Factory Pattern
         CreationalPatternCaller.abstractFactoryPatternCaller();
+    }
+
+    private static void behavioralPatternCallers() {
+        // Strategy Pattern
+        BehavioralPatternCaller.strategyPatternCaller();
     }
 }
